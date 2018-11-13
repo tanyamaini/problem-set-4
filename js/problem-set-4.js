@@ -4,7 +4,9 @@
 
 function hello() {
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
+var div=document.getElementById("output1");
+div.innerHTML="Hello, AP Computer Science Principles!";
+
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -24,7 +26,9 @@ function helloAgain() {
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+  var div=document.getElementById("output2");
+  name= prompt("What is your name?");
+  div.innerHTML="Hello, " + name + "!";
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -44,7 +48,9 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  var div=document.getElementById("output3");
+  let fahr = (cels*1.8+32) .toFixed(2)
+  div.innerHTML= cels + " degrees Celsius equals " + fahr + " degrees Fahrenheit.";
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -64,7 +70,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  var div=document.getElementById("output4");
+  let cels = ((fahr-32)/1.8) .toFixed(2);
+  div.innerHTML= fahr + " degrees Fahrenheit equals " + cels + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -88,7 +96,11 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+  var div=document.getElementById("output5");
+  let miles = (input/63360) .toFixed(0);
+  let yards = (input/36) .toFixed(0);
+  let feet = (input/12) .toFixed(0);
+  div.innerHTML= "Miles: " + miles + "<br>" + " Yards: " + yards + "<br>" + " Feet: " + feet + "<br>" + " Inches: " + inches;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
